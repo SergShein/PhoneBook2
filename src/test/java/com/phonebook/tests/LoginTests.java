@@ -1,6 +1,8 @@
 package com.phonebook.tests;
 
 import com.phonebook.models.User;
+import com.phonebook.utils.ContactData;
+import com.phonebook.utils.UserData;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -18,8 +20,8 @@ public class LoginTests extends TestBase{
         //click on Login link
         app.getUser().clickOnLoginLink();
         //enter email
-        app.getUser().fillLoginRegisterForm(new User().setEmail("rambo23@gm.com")
-                .setPassword("Rambo23$"));
+        app.getUser().fillLoginRegisterForm(new User().setEmail(UserData.EMAIL)
+                .setPassword(UserData.PASSWORD));
 
         //click on Login button
         app.getUser().clickOnLoginButton();
@@ -31,7 +33,7 @@ public class LoginTests extends TestBase{
         app.getUser().clickOnLoginLink();
         //enter email
         app.getUser().fillLoginRegisterForm(new User()
-                .setPassword("Rambo23$"));
+                .setPassword(UserData.PASSWORD));
 
         //click on Login button
         app.getUser().clickOnLoginButton();
