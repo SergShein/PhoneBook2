@@ -33,7 +33,7 @@ public class LoginTests extends TestBase{
         app.getUser().clickOnLoginLink();
         //enter email
         app.getUser().fillLoginRegisterForm(new User()
-                .setPassword(UserData.PASSWORD));
+                .setPassword(UserData.PASSWORD ));
 
         //click on Login button
         app.getUser().clickOnLoginButton();
